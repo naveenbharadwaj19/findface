@@ -2,35 +2,23 @@ import face_recognition
 import os
 from PIL import Image,ImageDraw,ImageFont
 
-path = 'D:/OTHER FILES D/CS ALL FOLD/PYTHON OWN PROJECTS/face recognition/face_rec work/unknown faces'
-save_images = 'D:/OTHER FILES D/CS ALL FOLD/PYTHON OWN PROJECTS/face recognition/face_rec work/detected faces'
+path = 'path/unknown faces'
+save_images = 'path/detected faces'
 
 #faces
-naveen_img = face_recognition.load_image_file('images face/naveen.jpg')
-naveen_img_encode = face_recognition.face_encodings(naveen_img)[0]
-padma_img = face_recognition.load_image_file('images face/padma.jpg')
-padma_img_encode = face_recognition.face_encodings(padma_img)[0]
-prasad_img = face_recognition.load_image_file('images face/prasad1.jpg')
-prasad_img_encode = face_recognition.face_encodings(prasad_img)[0]
-# praveen_img = face_recognition.load_image_file('images face/praveen.jpg')
-# praveen_img_encode = face_recognition.face_encodings(praveen_img)[0]
-# cooper_img = face_recognition.load_image_file('images face/cooper.jpg')
-# cooper_img_encode = face_recognition.face_encodings(cooper_img)[0]
+elon_musk = face_recognition.load_image_file('images face/elon musk.jpg')
+elon_musk_encode = face_recognition.face_encodings(elon_musk)[0]
+jeff_bezos = face_recognition.load_image_file("images face/jeff bezos.jpg")
+jeff_bezos_encode = face_recognition.face_encodings(jeff_bezos)[0]
 
 known_face_encoding = [
-    naveen_img_encode,
-    padma_img_encode,
-    prasad_img_encode,
-    # praveen_img_encode,
-    # cooper_img_encode
+    elon_musk_encode,
+    jeff_bezos_encode,
 ]
 
 known_face_names = [
-    'Naveen Bharadwaj',
-    'Padma',
-    "Prasad",
-    # "Praveen",
-    # "Cooper"
+    'Elon Musk',
+    'Jeff Bezos',
 ]
 
 images_save = []
